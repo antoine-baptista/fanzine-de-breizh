@@ -1,0 +1,555 @@
+/*------------------------------------------------------------*/
+/*  Antoine Baptista - 2021-2022 premier code en HTML et CSS  */
+/*------------------------------------------------------------*/
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Source Serif Pro', serif; */
+/* font-family: 'Bebas Neue', cursive; */
+/* font-family: 'Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif; */
+
+/* Les couleurs
+jaune-vert: rgb(186,199,0);
+rose: rgb(213,0,80);
+cyan: rgb(61,166,193);
+cyan-bleu: rgb(13,40,89);
+noir: rgb(0,0,0);
+blanc: rgb(255,255,255);
+background: rgba(255, 255, 255, 0.63);
+*/
+
+/* La gestion des différentes polices */
+/* la typographie
+header-font: 'Pacifico', cursive;
+title-font: 'Source Serif Pro', serif;
+blog-font: 'Bebas Neue', cursive;
+body-font: 'Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;
+*/
+
+#body-index {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    /* background-image: url("../src/img/sable.jpg"); */
+    background-image: url("../src/img/loc-amand.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+}
+
+#body-rechercher {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    background-image: url("../src/img/sable.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+    overflow: auto;
+}
+
+#body-copyright {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    background-image: url("../src/img/anse-du-bourg-la-foret-fouesnant.jpg");
+    /* background-image: url("../src/img/sable.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+    overflow: auto;
+}
+
+#body-a-propos {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    /* background-image: url("../src/img/sable.jpg"); */
+    background-image: url("../src/img/st-laurent-vue-aerienne.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+    overflow: auto;
+}
+
+#body-about-me {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    /* background-image: url("../src/img/sable.jpg"); */
+    background-image: url("../src/img/plage-de-kerleven.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+    overflow: auto;
+}
+
+#body-blog {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    /* background-image: url("../src/img/sable.jpg"); */
+    background-image: url("../src/img/etoile_sur_coque_de_bateau.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+    overflow: auto;
+}
+
+#body-post-add {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    /* background-image: url("../src/img/sable.jpg"); */
+    background-image: url("../src/img/musee-de-la-peche.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+    overflow: auto;
+}
+
+#body-contact {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    /* background-image: url("../src/img/sable.jpg"); */
+    background-image: url("../src/img/hortensia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+    overflow: auto;
+}
+
+#body-login {
+    height: 100vh;
+    /* on affecte à l'élément 'body' une image de fond */
+    /* background-image: url("../src/img/sable.jpg"); */
+    background-image: url("../src/img/maison-bretonne.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-position: bottom left;
+    overflow: auto;
+}
+
+header {
+    /* espacement des éléments qui se trouvent dans le header
+       il s'agit du burger, du titre et de l'hermine */
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.63);
+    height: 5rem;
+}
+
+header h1{
+    /* relatif au titre du blog -- couleur ey
+       positionnement et affectation de la TTF */
+    font-family: 'Pacifico', cursive;
+    font-size: 33px;
+    color: #0D2859;
+    margin-top: 18px;
+}
+
+.hermine {
+    /* positionnement du logo */
+    margin: 20px 20px 0px 20px;
+    width: 40px;
+    height: 40px;
+}
+
+
+#menu {
+    /* Ce code n'est pas de moi, je l'ai récupéré sur internet puis beaucoup
+       adapté afin qu'il reproduise exactement les effets que je souhaitais
+       tout en conservant l'âme originelle de mon blog
+       explications de ce que produit chaque bloc */
+    /* définition de la largeur et du positionnement des boutons du menu
+       ainsi que de la croix par rapport au cercle qui va être fabriqué*/
+    z-index: 2;
+    width: 100%;
+}
+  
+#menu-bar {
+     /* largeur et hauteur ainsi que positionnement du burger */
+    width: 45px;
+    height: 40px;
+    margin: 33px 20px 20px 20px;
+    cursor: pointer;
+}
+
+.bar {
+     /* définition de la taille et de la forme des barres qui constituent le burger
+        de leur couleur, de l'arrondi 
+        chaque barre prend toute la place disponible et pousse la suivante à la ligne
+        elles se positionnent toutes les unes sur les autres */
+    height: 5px;
+    width: 100%;
+    background-color: #0D2859;
+    display: block;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+  
+#bar1 {
+     /* translate => déplace la bar1 4 pixels au dessus de l'endroit où elle se situe */
+    transform: translateY(-4px);
+    background-color: #0D2859;
+}
+  
+#bar3 {
+    /* translate => déplace la bar1 4 pixels en dessous de l'endroit où elle se situe */
+    transform: translateY(4px);
+    background-color: #0D2859;
+}
+  
+.nav {
+    /* permet de cacher les boutons tant qu'il n'y a pas eu d'évènement 'OnClick' */
+    transition: 0.3s ease;
+    display: none;
+}
+  
+.nav ul {
+    /* affecte un padding à chaque élément ul du parent possédant la class nav */
+    padding: 0 22px;
+}
+  
+.nav li {
+     /* affecte un padding à chaque élément li du parent possédant la class nav */
+    list-style: none;
+    padding: 9px 0;
+}
+  
+.nav li a {
+     /* affecte une couleur à chaque élément a du parent li possédant un parent
+        avec la class nav */
+    color: white;
+    text-decoration: none;
+}
+  
+.menu-bg, #menu {
+    /* positionnement du menu ainsi que du cercle qui va être fabriqué */
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+  
+.menu-bg {
+    /* fabrication du cercle */
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 40px 0px 20px 20px;
+    background: radial-gradient(circle, rgb(13, 40, 89), rgba(13, 40, 89, 0.3));
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+  
+.change {
+    /* affichage des boutons */
+    display: block;
+}
+  
+.change .bar {
+    /* couleur des barres du burger */
+    background-color: white;
+}
+  
+.change #bar1 {
+    /* on transforme la barre 1 en une barre 45° vers le bas */
+    transform: translateY(4px) rotateZ(-45deg);
+}
+  
+.change #bar2 {
+    /* on rend la barre du milieu invisible */
+    opacity: 0;
+}
+  
+.change #bar3 {
+    /* on transforme la barre 1 en une barre 45° vers le haut */
+    transform: translateY(-6px) rotateZ(45deg);
+}
+  
+.change-bg {
+    /* width: 520px;
+    height: 460px;
+    transform: translate(-60%,-30%); */
+    width: 850px;
+    height: 1000px;
+    transform: translate(-60%,-30%);
+}
+
+/* --------------------------------------------------------------------- */
+
+#nav {
+    /* rajout de ce premier bloc pour positionner les boutons de navigation
+       --> l'ahout du CDN de Bootstrap a tout décalé --
+       Ce projet doit être implémenté dans Symfony + Bootstrap 
+       j'anticipe donc !! */
+    /* width: 150px; */
+    height: 19px;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+#nav a {
+    /* décoration des boutons */
+    display: inline-block;
+    width: 172px;
+    padding: 6px;
+    border: solid #3DA6C1 1px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    text-align: center;
+    text-shadow: 1px 1px 20px #000;
+    font-family: 'Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    background: #3DA6C1;
+    background-image: -webkit-linear-gradient(top, #3DA6C1,#3DA6C1);
+    background-image: -moz-linear-gradient(top, #3DA6C1, #3DA6C1);
+    background-image: -ms-linear-gradient(top, #3DA6C1, #3DA6C1);
+    background-image: -o-linear-gradient(top, #3DA6C1, #3DA6C1);
+    background-image: -webkit-gradient(to bottom,#3DA6C1,#3DA6C1);
+    -webkit-box-shadow: 1px 1px 20px 0 #000;
+    -moz-box-shadow: 1px 1px 20px 0 #000;
+    box-shadow: 1px 1px 20px 0 #000;
+    cursor: pointer;
+}
+
+#nav a:hover {
+    /* décoration des boutons lorsqu'on les survole */
+   border: solid #3DA6C1 1px;
+   background: #BAC700;
+   background-image: -webkit-linear-gradient(top, #BAC700, #BAC700);
+   background-image: -moz-linear-gradient(top, #BAC700, #BAC700);
+   background-image: -ms-linear-gradient(top, #BAC700, #BAC700);
+   background-image: -o-linear-gradient(top, #BAC700, #BAC700);
+   background-image: -webkit-gradient(to bottom, #BAC700, #BAC700);
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+}
+
+#nav .login {
+    /* décoration du bouton Login */
+   background: #BAC700;
+   background-image: -webkit-linear-gradient(top, #BAC700, #BAC700);
+   background-image: -moz-linear-gradient(top, #BAC700, #BAC700);
+   background-image: -ms-linear-gradient(top, #BAC700, #BAC700);
+   background-image: -o-linear-gradient(top, #BAC700, #BAC700);
+   background-image: -webkit-gradient(to bottom, #BAC700, #BAC700);
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+   font-family: 'Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;
+   font-size: 16px;
+   padding: 6px;
+   -webkit-box-shadow: 1px 1px 20px 0 #000;
+   -moz-box-shadow: 1px 1px 20px 0 #000;
+   box-shadow: 1px 1px 20px 0 #000;
+   text-shadow: 1px 1px 20px #000;
+   border: solid #3DA6C1 1px;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+}
+
+#nav .login:hover {
+    /* décoration du boutn Login lors de son survol */
+   border: solid #BAC700 1px;
+   background: #D50050;
+   background-image: -webkit-linear-gradient(top, #D50050, #D50050);
+   background-image: -moz-linear-gradient(top, #D50050, #D50050);
+   background-image: -ms-linear-gradient(top, #D50050, #D50050);
+   background-image: -o-linear-gradient(top, #D50050, #D50050);
+   background-image: -webkit-gradient(to bottom, #D50050, #D50050);
+   -webkit-border-radius: 7px;
+   -moz-border-radius: 7px;
+   border-radius: 7px;
+}
+
+.nom-balades p{
+    /*  */
+    display: flex;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 72px;
+    text-shadow: 1px 3px 1px #0D2859;
+    color: #3DA6C1;
+    margin-top: calc(100vh/2);
+}
+
+.footer {
+    /*  */ 
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+    font-family: 'Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif; 
+    text-align: center;
+    width: 100vw;
+    position: fixed;
+    height: 1.9em;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.63);
+}
+
+.footer p {
+    /*  */
+    margin: 0;
+}
+
+.footer span{
+    /*  */
+    font-family: 'Pacifico', cursive;
+    font-size: 10px;
+    color: #0D2859;
+}
+
+/* --------------------------------------------------------------------- */
+
+#reseaux-deroulants ul img{
+    /* le code ci-dessous a également été adapté pour faire en sorte qu'au survol
+       de l'hermine, les icônes des réseaux sociaux défilent comme dans un menu
+       déroulant - quasiment toutes les valeurs ont été changées pour que cela
+       reste conforme à l'âme de mon blog */
+    /* je donne une hauteur et une largeur aux images */
+    height: 35px;
+    width: 35px;
+}
+
+#reseaux-deroulants, #reseaux-deroulants ul{
+    /* positionnement des images même s'il n'y a pas de texte
+       cela permet ainsi à ce qu'elles se déroulent juste en dessous
+       de l'hermine */
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align:center;
+}
+
+#reseaux-deroulants li{
+    /*  */
+    display:inline-block;
+    position:relative;
+    border-radius:8px 8px 0 0;
+}
+
+#reseaux-deroulants ul li{
+    /*  */
+    display:inherit;
+    border-radius:0;
+}
+
+#reseaux-deroulants ul li:hover{
+    /*  */
+    border-radius:0;
+}
+
+#reseaux-deroulants ul li:last-child{
+    /*  */ 
+    border-radius:0 0 8px 8px;
+}
+
+#reseaux-deroulants ul{
+    /*  */
+    position:absolute;
+    z-index: 1000;
+    max-height:0;
+    left: 0;
+    right: 0;
+    overflow:hidden;
+    -moz-transition: .8s all .3s;
+    -webkit-transition: .8s all .3s;
+    transition: .8s all .3s;
+}
+
+#reseaux-deroulants li:hover ul{
+    /*  */
+    max-height:15em;
+}
+
+/* --------------------------------------------------------------------- */
+
+.triangle{
+    /*  */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 66px;
+    height: 66px;
+    z-index: 1;
+    }
+
+#prezblog-titre, #aboutme-titre, #copyright-titre{
+    /*  */
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 90vw;
+    padding: 10px 5px 10px 5px;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 3px 1px #3DA6C1;
+    color: #0D2859;
+}
+
+#prezblog-texte, #aboutme-texte, #copyright-texte{
+    /*  */
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 90vw;
+    margin-top: 15px;
+    padding: 10px 5px 10px 5px;
+    font-family: 'Trebuchet MS','Lucida Grande','Lucida Sans Unicode','Lucida Sans',Tahoma,sans-serif;
+    font-size: 14px;
+    max-height: 100vh;
+}
+
+#video{
+    width: 90vw;
+}
+
+#video h3 {
+    /* titre : 'Babou à la plage :' */
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 10px 5px 10px 5px;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 1px 3px 1px #3DA6C1;
+    color: #0D2859;
+}
+
+.iframe_container{
+    /* nom de la class de la div qui contient les deux vidéos de la page 
+       about me !! */
+    margin-top: 10px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    /* selon le point de rupture on pourra mettre
+       justify-content: space-between; */
+}
+
+.vid1, .vid2 {
+    margin: 5px 0px 0px 0px;
+}
